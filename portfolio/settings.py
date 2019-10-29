@@ -15,7 +15,6 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
@@ -26,7 +25,6 @@ SECRET_KEY = 'yg64z1z+6#9&e&8yrl4xqh*a_v7g#j39+!ty8qjzp^3!0tb2sa'
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
 
 # Application definition
 
@@ -71,7 +69,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'portfolio.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
@@ -111,7 +108,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
 
@@ -125,10 +121,14 @@ USE_L10N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
+# What directories to look for static files.
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'portfolio/static/')  # Where to save static files.
+               ]
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')  # Where to save static files.
 STATIC_URL = '/static/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')    # Where to save media files.
-MEDIA_URL = '/media/'                           # What URL points to media files.
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')  # Where to save media files.
+MEDIA_URL = '/media/'  # What URL points to media files.
