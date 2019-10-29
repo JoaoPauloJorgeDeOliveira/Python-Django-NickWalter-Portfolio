@@ -134,6 +134,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')  # Where to save media files.
 MEDIA_URL = '/media/'  # What URL points to media files.
 
 try:
-    from local_setting import *
+    from .local_settings import *
 except ImportError:
     pass
