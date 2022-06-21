@@ -24,7 +24,7 @@ keyring==10.6.0
 keyrings.alt==3.0
 MarkupSafe==1.0
 netifaces==0.10.4
-numpy==1.16.3
+numpy==1.22.0
 oauthlib==2.0.6
 Pillow==6.2.1
 pprint==0.1
